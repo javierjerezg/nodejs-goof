@@ -8,26 +8,26 @@ require('./typeorm-db')
 
 let st = require('st');
 let crypto = require('crypto');
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var ejsEngine = require('ejs-locals');
-var bodyParser = require('body-parser');
-var session = require('express-session')
-var methodOverride = require('method-override');
-var logger = require('morgan');
-var errorHandler = require('errorhandler');
-var optional = require('optional');
-var marked = require('marked');
-var fileUpload = require('express-fileupload');
-var dust = require('dustjs-linkedin');
-var dustHelpers = require('dustjs-helpers');
-var cons = require('consolidate');
+let express = require('express');
+let http = require('http');
+let path = require('path');
+let ejsEngine = require('ejs-locals');
+let bodyParser = require('body-parser');
+let session = require('express-session')
+let methodOverride = require('method-override');
+let logger = require('morgan');
+let errorHandler = require('errorhandler');
+let optional = require('optional');
+let marked = require('marked');
+let fileUpload = require('express-fileupload');
+let dust = require('dustjs-linkedin');
+let dustHelpers = require('dustjs-helpers');
+let cons = require('consolidate');
 const hbs = require('hbs')
 
-var app = express();
-var routes = require('./routes');
-var routesUsers = require('./routes/users.js')
+let app = express();
+let routes = require('./routes');
+let routesUsers = require('./routes/users.js')
 
 // all environments
 app.set('port', process.env.PORT || 3001);
@@ -80,7 +80,7 @@ if (app.get('env') == 'development') {
   app.use(errorHandler());
 }
 
-var token = 'SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9';
+let token = 'SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9';
 console.log('token: ' + token);
 
 http.createServer(app).listen(app.get('port'), function () {
